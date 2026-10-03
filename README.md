@@ -1,6 +1,6 @@
 # Ansh Kumar Singh
 
-**AI Engineer at TCS — building with LLMs, and rebuilding the engineering underneath.**
+**AI Engineer — building with LLMs, and rebuilding the engineering underneath.**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshks)
 [![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anshkumarsingh107@gmail.com)
