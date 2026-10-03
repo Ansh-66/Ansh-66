@@ -9,9 +9,9 @@
 
 ## About
 
-I work on the Rapid Build Team at Tata Consultancy Services, turning enterprise client use cases into working LLM systems — document extraction, schema-enforced validation, approval workflows — for clients in banking, government, and real estate.
+I build LLM systems for a living — document extraction, schema-enforced validation, retrieval — and I'm deepening the engineering underneath that work.
 
-A lot of that delivery happened with AI coding tools. So I started building things the other way: from scratch, with code generation switched off, measuring what I claim. The repositories here are the result. They're small on purpose, and every number in them comes from a harness I wrote.
+A lot of what I've shipped was built with AI coding tools. So I started building things the other way: from scratch, with code generation switched off, measuring what I claim. The repositories here are the result. They're small on purpose, and every number in them comes from a harness I wrote.
 
 **Currently:** finishing a Graph RAG pipeline, and working through DSA daily.
 
@@ -36,15 +36,6 @@ Retrieval pipeline built end to end with AI code generation disabled — chunkin
 Entity-centric graph retrieval over Indian insurance-sector news, for questions that need evidence from more than one article. LLM relation extraction, entity resolution, and two-hop traversal with cited answers.
 
 Being evaluated three ways — no context, vector top-k, and graph traversal — to test whether traversal actually beats vector retrieval on multi-hop questions. Results go here when the comparison is done.
-
----
-
-## Experience
-
-**AI Engineer — AI & Service Transformations, Tata Consultancy Services** *(Jan 2025 – present)*
-
-- Delivered LLM document-processing proof-of-concepts for three enterprise clients: a loan and policy onboarding system for an Indian private-sector bank, a driver-licensing document validator for a UK transport authority, and a conversational intake agent for a Gulf megaproject developer.
-- Facilitated AI enablement sessions for executive leadership at two international enterprises — 4 sessions, 35–40 board members and senior executives each — including a live multi-agent demo I built and presented.
 
 ---
 
