@@ -13,7 +13,7 @@ I build LLM systems for a living — document extraction, schema-enforced valida
 
 A lot of what I've shipped was built with AI coding tools. So I started building things the other way: from scratch, measuring what I claim. The RAG pipeline was built with code generation switched off. In the Graph RAG project I designed the system and wrote the retrieval core myself, with an AI assistant handling plumbing. The repositories are small on purpose, and every number in them comes from an evaluation harness in the repo.
 
-**Currently:** building a frontend for the Graph RAG project, and working through DSA daily.
+**Currently:** measuring when a team of agents beats a single agent, on the Graph RAG knowledge base; finishing the Graph RAG frontend; working through DSA daily.
 
 ---
 
@@ -39,13 +39,22 @@ Entity-centric graph retrieval over 110 Indian insurance-sector news articles, f
 - Vector won the one question whose article was lost during extraction. Without retrieval, the model gave confident, specific wrong answers, including an acquisition that never happened.
 - Traced a weakly supported answer to retrieval rather than the model: one heavily reported deal filled 14 of 30 context slots and crowded out the second-hop evidence. Round-robin evidence assembly fixed it.
 
+### Single vs Multi-Agent &nbsp;·&nbsp; [repo](https://github.com/Ansh-66/single-vs-multi-agent) &nbsp;·&nbsp; *in progress*
+
+`Python` `Groq` `tool calling`
+
+A measured comparison on the Graph RAG knowledge base: when does a team of agents beat one agent with the same tools, and what does it cost? Three designs share one model (gpt-oss-120b, temperature 0), the same three retrieval tools and the same answer rules: a single tool-calling agent, a planner with worker agents, and the same plus a verifier. They will be scored on accuracy, grounding, tokens, LLM calls and a failure taxonomy, over 12 to 15 questions written before the multi-agent designs exist. The agent loop is written by hand, with no agent framework. Results are not in yet.
+
+- Measured tool-result sizes before choosing any format. Returned as raw JSON, one graph lookup on a hub company came to about 17,000 tokens, and every later call in the question resends it. Compact text, one evidence sentence per edge, an optional second-company filter and a 6,000-character cap bring the worst case to about 1,500 tokens.
+- A single tool round trip showed that 90% of the model's output tokens were hidden reasoning, and that a prompt mentioning tools the request did not include made the model invent one.
+
 ---
 
 ## Tech
 
 **Languages** · Python · JavaScript · SQL · HTML/CSS
 
-**Building with LLMs** · Gemini, OpenAI and Groq APIs · prompt engineering · schema-enforced structured outputs · RAG (chunking, embeddings, retrieval, reranking) · Graph RAG (relation extraction, entity resolution, graph traversal) · evaluation (hit@k, test suites, multi-arm comparisons)
+**Building with LLMs** · Gemini, OpenAI and Groq APIs · prompt engineering · schema-enforced structured outputs · tool calling · RAG (chunking, embeddings, retrieval, reranking) · Graph RAG (relation extraction, entity resolution, graph traversal) · evaluation (hit@k, test suites, multi-arm comparisons)
 
 **Libraries & tools** · NumPy · Pydantic · sentence-transformers · Git · SQLite · Ollama
 
