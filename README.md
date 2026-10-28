@@ -14,7 +14,7 @@ I build LLM systems for a living: document extraction, schema-enforced validatio
 
 The projects here are where I go deeper on the engineering underneath that work. They're small on purpose, they measure what they claim, and every number in them comes from an evaluation harness in the repo. The RAG pipeline was written with code generation switched off.
 
-**Currently:** measuring when a team of agents beats a single agent, on the Graph RAG knowledge base; working through DSA daily.
+**Currently:** building a frontend for the Graph RAG project, and working through DSA daily.
 
 ---
 
@@ -65,7 +65,7 @@ A measured comparison on the Graph RAG knowledge base: when does a team of agent
 
 **Languages** · Python · JavaScript · SQL · HTML/CSS
 
-**Building with LLMs** · Gemini, OpenAI, Groq and Sarvam APIs · MCP · tool calling · agent loops without frameworks · prompt engineering · schema-enforced structured outputs · RAG (chunking, embeddings, retrieval, reranking) · Graph RAG (relation extraction, entity resolution, graph traversal) · evaluation (hit@k, journey-based agent evals, test suites, multi-arm comparisons)
+**Building with LLMs** · Gemini, OpenAI and Groq APIs · prompt engineering · schema-enforced structured outputs · RAG (chunking, embeddings, retrieval, reranking) · Graph RAG (relation extraction, entity resolution, graph traversal) · evaluation (hit@k, test suites, multi-arm comparisons)
 
 **Libraries & tools** · NumPy · Pydantic · scikit-learn · sentence-transformers · Git · SQLite · DuckDB · Ollama
 
