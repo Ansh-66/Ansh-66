@@ -59,15 +59,6 @@ A measured comparison on the Graph RAG knowledge base: when does a team of agent
 - Measured tool-result sizes before choosing any format. Returned as raw JSON, one graph lookup on a hub company came to about 17,000 tokens, and every later call in the question resends it. Compact text, one evidence sentence per edge, an optional second-company filter and a 6,000-character cap bring the worst case to about 1,500 tokens.
 - A single tool round trip showed that 90% of the model's output tokens were hidden reasoning, and that a prompt mentioning tools the request did not include made the model invent one.
 
-### Single vs Multi-Agent &nbsp;·&nbsp; [repo](https://github.com/Ansh-66/single-vs-multi-agent) &nbsp;·&nbsp; *in progress*
-
-`Python` `Groq` `tool calling`
-
-A measured comparison on the Graph RAG knowledge base: when does a team of agents beat one agent with the same tools, and what does it cost? Three designs share one model (gpt-oss-120b, temperature 0), the same three retrieval tools and the same answer rules: a single tool-calling agent, a planner with worker agents, and the same plus a verifier. They will be scored on accuracy, grounding, tokens, LLM calls and a failure taxonomy, over 12 to 15 questions written before the multi-agent designs exist. The agent loop is written by hand, with no agent framework. Results are not in yet.
-
-- Measured tool-result sizes before choosing any format. Returned as raw JSON, one graph lookup on a hub company came to about 17,000 tokens, and every later call in the question resends it. Compact text, one evidence sentence per edge, an optional second-company filter and a 6,000-character cap bring the worst case to about 1,500 tokens.
-- A single tool round trip showed that 90% of the model's output tokens were hidden reasoning, and that a prompt mentioning tools the request did not include made the model invent one.
-
 ---
 
 ## Tech
